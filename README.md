@@ -1,4 +1,4 @@
-# restapi
+# restapi [![Build Status](https://travis-ci.org/alesr/restapi.svg?branch=master)](https://travis-ci.org/alesr/restapi)
 Wraps the implementation for a REST API written in Go, using Swagger for documentation and stub API generation.
 
 The scope of this repository is to serve as a resource for REST APIs implementations.
