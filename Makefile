@@ -28,3 +28,7 @@ nginx/build: ## build nginx image with custom configuration
 .PHONY: nginx/start
 nginx/start: ## start nginx container as reverse proxying for editor and stub api
 	@docker-compose up -d --build nginx
+
+.PHONY: api/test
+api/test: ## run api unit tests
+	@docker-compose up --build test
