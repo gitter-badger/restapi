@@ -2,10 +2,12 @@ version: '3'
 
 services:
 
+  # swagger editor
   editor:
     container_name: editor
     image: swaggerapi/swagger-editor
 
+  # stub api server
   stub:
     container_name: stub
     image: alesr/stub_api
@@ -14,6 +16,7 @@ services:
       context: .
       dockerfile: resources/stub_api/Dockerfile
 
+  # reverse proxy
   nginx:
     container_name: nginx
     image: alesr/nginx
