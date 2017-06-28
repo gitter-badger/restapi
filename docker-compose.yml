@@ -2,6 +2,14 @@ version: '3'
 
 services:
 
+  # api tests
+  test:
+    container_name: api_test
+    image: alesr/api-test
+    build:
+      context: .
+      dockerfile: resources/server/test/Dockerfile
+
   # swagger editor
   editor:
     container_name: editor
