@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+  editor:
+    container_name: editor
+    image: swaggerapi/swagger-editor
+
+  stub:
+    container_name: stub
+    image: alesr/stub_api
+
+    build:
+      context: .
+      dockerfile: resources/stub_api/Dockerfile
+
+  nginx:
+    container_name: nginx
+    image: alesr/nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+      - "8081:8081"
+    links:
+      - editor:editor
+      - stub:stub
+    depends_on:
+      - editor
+      - stub
+    build:
+      context: .
+      dockerfile: resources/nginx/Dockerfile
