@@ -21,7 +21,7 @@ http://127.0.0.1:8080/docs             -> API specification
 ## Available commands:
 ```
 ------------------------------------------------------------------------
-SWAGGER
+RESTAPI
 ------------------------------------------------------------------------
 nginx/build                    build nginx image with custom configuration
 nginx/start                    start nginx container as reverse proxying for editor and stub api
