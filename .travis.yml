@@ -1,5 +1,7 @@
 sudo: false
 
+language: go
+
 services:
   - docker
 
